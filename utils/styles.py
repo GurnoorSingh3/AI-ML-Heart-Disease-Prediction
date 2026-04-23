@@ -340,7 +340,6 @@ def inject_css():
 }
 
 
-
     /* ── About page feature cards ── */
     .feature-card {
         background: var(--white);
@@ -361,10 +360,15 @@ def inject_css():
         margin: 0;
         line-height: 1.5;
     }
+                
+    .block-container {
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
     </style>
     """, unsafe_allow_html=True)
-
-
+    
 def sidebar_logo():
     """Renders the CardioScan logo block inside the sidebar."""
     st.sidebar.markdown("""

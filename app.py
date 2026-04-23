@@ -4,7 +4,8 @@ import pandas as pd
 from utils.styles import inject_css, sidebar_logo, divider
 from utils.database import init_db, save_prediction
 
-# ── Page config (must be first Streamlit call) ────────────────────────────────
+st.set_page_config(layout="wide")
+# ── Page config 
 st.set_page_config(
     page_title="CardioScan · Home",
     page_icon="🫀",
@@ -14,7 +15,7 @@ st.set_page_config(
 inject_css()
 sidebar_logo()
 
-# ── Load model & scaler (cached so they only load once) ───────────────────────
+# ── Load model & scaler 
 @st.cache_resource
 def load_artifacts():
     with open("heart_disease_model.pkl", "rb") as f:
@@ -25,10 +26,10 @@ def load_artifacts():
 
 model, scaler = load_artifacts()
 
-# ── Initialise the SQLite database (creates tables if they don't exist) ───────
+# ── Initialise the SQLite database 
 init_db()
 
-# ── Hero banner ───────────────────────────────────────────────────────────────
+# ── Hero banner 
 st.markdown("""
 <div class="hero">
   <span class="hero-icon">🫀</span>
