@@ -361,11 +361,6 @@ def inject_css():
         line-height: 1.5;
     }
                 
-    .block-container {
-    max-width: 100% !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-}
     </style>
     """, unsafe_allow_html=True)
     

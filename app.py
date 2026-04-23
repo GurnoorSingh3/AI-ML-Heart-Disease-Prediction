@@ -4,7 +4,6 @@ import pandas as pd
 from utils.styles import inject_css, sidebar_logo, divider
 from utils.database import init_db, save_prediction
 
-st.set_page_config(layout="wide")
 # ── Page config 
 st.set_page_config(
     page_title="CardioScan · Home",
@@ -62,9 +61,9 @@ with col2:
     thal    = st.selectbox("Thalassemia",                 ["fixed defect", "normal", "reversable defect"])
 
 divider("Run Analysis")
-predict_btn = st.button("🔍  Analyse Risk")
+predict_btn = st.button("🔍  Analyse Risk",use_container_width=True)
 
-# ── Prediction logic (runs only when button is clicked) ───────────────────────
+# ── Prediction logic
 if predict_btn:
 
     # 1. Build empty DataFrame with exact columns the model expects

@@ -106,8 +106,8 @@ if history:
 
     #  Clear history button
     divider("Manage")
-    st.warning("⚠️ Clearing history permanently deletes all saved predictions.")
-    if st.button("🗑️  Clear All History"):
+    # st.warning("⚠️ Clearing history permanently deletes all saved predictions.")
+    if st.button("🗑️  Clear All History",use_container_width=True):
         clear_all_predictions()
         st.success("History cleared. Refresh the page to see the updated table.")
 
