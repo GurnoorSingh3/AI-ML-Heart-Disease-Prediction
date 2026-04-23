@@ -12,7 +12,7 @@ st.set_page_config(
 inject_css()
 sidebar_logo()
 
-# ── Page header ───────────────────────────────────────────────────────────────
+# Page header 
 st.markdown("""
 <div class="hero">
   <span style="font-size:2.6rem; display:block; margin-bottom:.4rem;">📋</span>
@@ -21,7 +21,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ── Load history from database ────────────────────────────────────────────────
+# Load history from database 
 divider("Past Predictions")
 
 history = get_all_predictions()
@@ -34,7 +34,7 @@ if history:
         "Prediction", "Probability", "Timestamp"
     ])
 
-    # ── Summary stat cards ────────────────────────────────────────────────────
+    # Summary stat cards 
     total      = len(history_df)
     high_risk  = (history_df["Prediction"] == "High Risk").sum()
     low_risk   = (history_df["Prediction"] == "Low Risk").sum()
@@ -61,7 +61,7 @@ if history:
     </div>
     """, unsafe_allow_html=True)
 
-    # ── Filters ───────────────────────────────────────────────────────────────
+    # Filters
     divider("Filter & View")
 
     filter_col1, filter_col2 = st.columns(2)
@@ -84,7 +84,7 @@ if history:
     elif sort_by == "Lowest Risk":
         history_df = history_df.sort_values("Probability", ascending=True)
 
-    # ── Display table (selected columns only) ─────────────────────────────────
+    # Display table (selected columns only)
     display_df = history_df[[
         "Name","Age", "Sex", "Chest Pain", "Cholesterol",
         "Max HR", "Prediction", "Probability", "Timestamp"
