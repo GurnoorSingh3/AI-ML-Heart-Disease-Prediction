@@ -67,9 +67,9 @@ st.markdown("""
 <div class="feature-card">
   <h4>📊 Evaluation Results</h4>
   <p>
-    • Accuracy: ~94% on unseen test data  
-    • Recall (Disease Class): ~92–95% — high sensitivity for detecting positive cases  
-    • ROC-AUC Score: ~0.98 — excellent class separability  
+    • Accuracy: ~94% on unseen test data <br>
+    • Recall (Disease Class): ~92–95% — high sensitivity for detecting positive cases  <br>
+    • ROC-AUC Score: ~0.98 — excellent class separability  <br>
     • 5-Fold Cross-Validation: Consistent performance with low variance  
   </p>
 </div>
