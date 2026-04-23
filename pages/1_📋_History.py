@@ -101,7 +101,7 @@ if history:
             return "background-color: #EAFAF1; color: #1E8449; font-weight: 600;"
         return ""
 
-    styled_df = display_df.style.applymap(highlight_prediction, subset=["Prediction"])
+    styled_df = display_df.style.map(highlight_prediction, subset=["Prediction"])
     st.dataframe(styled_df, use_container_width=True, hide_index=True)
 
     #  Clear history button
